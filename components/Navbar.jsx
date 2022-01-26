@@ -1,10 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import githubIcon from '../public/github.png';
-import linkedInIcon from '../public/linkedin-logo.png';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaLinkedin, FaGithub, FaCode } from 'react-icons/fa';
 import navbarStyles from '../styles/components/navbar.module.css';
-import { faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 
 const Navbar = () => {
     return (
@@ -12,45 +10,66 @@ const Navbar = () => {
             <ul>
                 <li>
                     <h1>
-                        <span className={navbarStyles.social}>
-                            <Link href='/' passHref>
-                                <FontAwesomeIcon icon={faCode} />
-                            </Link>
-                        </span>
-                        <span>Anderson Cardoso</span>
+                        <Link href='/' passHref>
+                            <a className={`${navbarStyles.a}`}>
+                                <span className={`fa`}>
+                                    <FaCode />
+                                </span>
+                            <span>Anderson Cardoso</span>
+                            </a>
+                        </Link>
                     </h1>
                 </li>
-                <li>
+                <li className={navbarStyles.a}>
                     <Link href='/'>
-                        Projects
+                        <a className={`${navbarStyles.a}`}>
+                            Projects
+                        </a>
                     </Link>
                 </li>
                 <li>
                     <Link href='/'>
-                        About
+                        <a className={`${navbarStyles.a}`}>
+                            About
+                        </a>
                     </Link>
                 </li>
                 <li>
                     <Link href='/'>
-                        Contact
+                        <a className={`${navbarStyles.a}`}>
+                            Contact
+                        </a>
                     </Link>
                 </li>
                 <li>
                     <Link href='/' passHref>
-                        <Image className={navbarStyles.soc} src={linkedInIcon} alt='linkedin icon' aria-hidden="true" />
+                        <a className={`${navbarStyles.a}`} aria-hidden='true'>
+                            <span className={`fa`}>
+                                <FaGithub />
+                            </span>
+                            <span className='sr-only'>
+                                Github
+                            </span>
+                        </a>
                     </Link>
                 </li>
                 <li>
-                    <span className={navbarStyles.social}>
-                        <Link href='/' passHref>
-                            <Image className={navbarStyles.soc} src={githubIcon} alt='github icon' aria-hidden="true" />
-                        </Link>
-                    </span>
-                    <span className='sr-only'>LinkedIn</span>
-                </li>
-                <li className={navbarStyles.button}>
                     <Link href='/' passHref>
-                        Resume
+                        <a className={`${navbarStyles.a} fa`} aria-hidden='true'>
+                            <span className={`fa`}>
+                                <FaLinkedin />
+                            </span>
+                            <span className='sr-only'>
+                                LinkedIn
+                            </span>
+                        </a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href='/' passHref>
+                        <a className={`${navbarStyles.a} ${navbarStyles.button}`}>
+                            Resume
+                        </a>
                     </Link>
                 </li>
             </ul>

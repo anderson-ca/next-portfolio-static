@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Navbar from '../components/Navbar';
-import { FaBeer } from 'react-icons/fa';
+
 
 
 export default function Home() {
@@ -14,9 +14,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
 
       </Head>
-    <h1>lasdfghjn</h1>
-    <FaBeer />
-    {/* <Navbar /> */}
+  
+    <Navbar />
     </div>
   )
 }
