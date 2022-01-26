@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link';
 import styles from '../styles/Home.module.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
+import { faCode } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 
 export default function Home() {
   return (
@@ -11,7 +14,49 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <h1>home page</h1>
+
+      <nav>
+        <ul>
+          <li>
+            <span>
+              <Link href='/' passHref>
+                <FontAwesomeIcon icon={faCode} />
+              </Link>
+            </span>
+            <span>Anderson Cardoso</span>
+          </li>
+          <li>
+            <Link href=''>
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link href=''>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href=''>
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link href=''>
+              LinkedIn
+            </Link>
+          </li>
+          <li>
+            <Link href=''>
+              Github
+            </Link>
+          </li>
+          <li>
+            <Link href=''>
+              Resume
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   )
 }
