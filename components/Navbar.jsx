@@ -1,44 +1,56 @@
-import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import githubIcon from '../public/github.png';
+import linkedInIcon from '../public/linkedin-logo.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import navbarStyles from '../styles/components/navbar.module.css';
+import { faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav className={navbarStyles.nav}>
             <ul>
                 <li>
-                    <Link href='#'>
-                        <span></span>
+                    <h1>
+                        <span className={navbarStyles.social}>
+                            <Link href='/' passHref>
+                                <FontAwesomeIcon icon={faCode} />
+                            </Link>
+                        </span>
                         <span>Anderson Cardoso</span>
+                    </h1>
+                </li>
+                <li>
+                    <Link href='/'>
+                        Projects
                     </Link>
                 </li>
                 <li>
-                    <Link href=''>
-
+                    <Link href='/'>
+                        About
                     </Link>
                 </li>
                 <li>
-                    <Link href=''>
-
+                    <Link href='/'>
+                        Contact
                     </Link>
                 </li>
                 <li>
-                    <Link href=''>
-
+                    <Link href='/' passHref>
+                        <Image className={navbarStyles.soc} src={linkedInIcon} alt='linkedin icon' aria-hidden="true" />
                     </Link>
                 </li>
                 <li>
-                    <Link href=''>
-
-                    </Link>
+                    <span className={navbarStyles.social}>
+                        <Link href='/' passHref>
+                            <Image className={navbarStyles.soc} src={githubIcon} alt='github icon' aria-hidden="true" />
+                        </Link>
+                    </span>
+                    <span className='sr-only'>LinkedIn</span>
                 </li>
-                <li>
-                    <Link href=''>
-
-                    </Link>
-                </li>
-                <li>
-                    <Link href=''>
-
+                <li className={navbarStyles.button}>
+                    <Link href='/' passHref>
+                        Resume
                     </Link>
                 </li>
             </ul>
