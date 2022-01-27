@@ -2,6 +2,8 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Navbar from '../components/Navbar';
 import Intro from '../components/Intro';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 
 
@@ -18,6 +20,9 @@ export default function Home() {
   
     <Navbar />
     <Intro />
+    <Contact />
+    <Footer />
+    
     </div>
   )
 }

@@ -55,7 +55,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <Link href='/' passHref>
-                        <a className={`${navbarStyles.a} fa`} aria-hidden='true'>
+                        <a className={`${navbarStyles.a}`} aria-hidden='true'>
                             <span className={`fa`}>
                                 <FaLinkedin />
                             </span>
