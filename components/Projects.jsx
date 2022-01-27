@@ -10,6 +10,7 @@ const Projects = () => {
         <div className={projectsStyles.sectionDKBlue}>
             <div className={projectsStyles.section} id={projectsStyles.projects}>
                 <h2>Projects Im proud of</h2>
+
                 <div className={projectsStyles.article}>
                     <div className={projectsStyles.text}>
                         <h4>Latest Projects</h4>
@@ -25,7 +26,9 @@ const Projects = () => {
                             <li>SVG</li>
                         </ul>
                     </div>
-                    <Image src={p1} alt="Screenshot of the Wall of Wonder." />
+                    <div className={projectsStyles.imageWrapper}>
+                        <Image src={p1} alt="Screenshot of the Wall of Wonder." />
+                    </div>
                 </div>
 
                 <div className={`${projectsStyles.article} ${projectsStyles.reverse}`}>
@@ -43,7 +46,9 @@ const Projects = () => {
                             <li>JavaScript</li>
                         </ul>
                     </div>
-                    <Image src={p2} alt="Screenshot of the Wall of Wonder." />
+                    <div className={projectsStyles.imageWrapper}>
+                        <Image src={p2} alt="Screenshot of the Wall of Wonder." />
+                    </div>
                 </div>
 
                 <div className={projectsStyles.article}>
@@ -60,8 +65,11 @@ const Projects = () => {
                             <li>CSS Grid</li>
                         </ul>
                     </div>
-                    <Image src={p3} alt="Screenshot of the Wall of Wonder." />
+                    <div className={projectsStyles.imageWrapper}>
+                        <Image src={p3} alt="Screenshot of the Wall of Wonder." />
+                    </div>
                 </div>
+                
             </div>
         </div>
     );
