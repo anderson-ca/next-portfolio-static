@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Navbar from '../components/Navbar';
+import Intro from '../components/Intro';
 
 
 
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
   
     <Navbar />
+    <Intro />
     </div>
   )
 }
